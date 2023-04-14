@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "cibYLTRXYMKJuHcYuwmd7qWldWxf1Xxe4vURzIKKMdc=",
+  "Source": "PassOrderKPro",
+  "BasePath": "_content/PassOrderKPro",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "PassOrderKPro\\wwwroot",
+      "Source": "PassOrderKPro",
+      "ContentRoot": "C:\\Users\\maksi\\Desktop\\wsr_rep\\PassOrderKPro\\PassOrderKPro\\wwwroot\\",
+      "BasePath": "_content/PassOrderKPro",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\maksi\\Desktop\\wsr_rep\\PassOrderKPro\\PassOrderKPro\\wwwroot\\css\\style.css",
+      "SourceId": "PassOrderKPro",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maksi\\Desktop\\wsr_rep\\PassOrderKPro\\PassOrderKPro\\wwwroot\\",
+      "BasePath": "_content/PassOrderKPro",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\maksi\\Desktop\\wsr_rep\\PassOrderKPro\\PassOrderKPro\\wwwroot\\img\\User.jpg",
+      "SourceId": "PassOrderKPro",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maksi\\Desktop\\wsr_rep\\PassOrderKPro\\PassOrderKPro\\wwwroot\\",
+      "BasePath": "_content/PassOrderKPro",
+      "RelativePath": "img/User.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\User.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\maksi\\Desktop\\wsr_rep\\PassOrderKPro\\PassOrderKPro\\wwwroot\\js\\main.js",
+      "SourceId": "PassOrderKPro",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\maksi\\Desktop\\wsr_rep\\PassOrderKPro\\PassOrderKPro\\wwwroot\\",
+      "BasePath": "_content/PassOrderKPro",
+      "RelativePath": "js/main.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\main.js"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+﻿@page
+@model PassOrderKPro.Pages.Form
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<meta name="viewport" content="width-device-width, initial-scale=1">
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Solo form</title>
+</head>
+<body>
+<form id="soloForm">
+<div id="container">
+        <div class="row">         
+            <div class="pass_info">
+                <div class="div_header"><span class="div_header_text">Информация о пропуске</span></div>
+                <span class="div_text">Срок действия заявки: <br>с*<input type="date" class="date"/> по <input type="date" class="date"/></span><br>
+                <span class="div_text">Цель посещения:</span><br>
+                <select class="list_target">
+                    <option> </option>
+                    <option>Экскурсия</option>
+                    <option>Трудоустройство</option>
+                </select>
+            </div>
+            <div class="accept_side">
+                <div class="div_header"><span class="div_header_text">Принимающая сторона</span></div>
+                <span class="div_text_as">Подразделение*:</span><br>
+                <select class="list_subdivision">
+                    <option> </option>
+                    <option>1</option>
+                    <option>2</option>
+                </select><br>
+                <span class="div_text_as">ФИО*:</span><br>
+                <input class="input_fio">
+                <img src="img/User.jpg" class="imgupload">
+            </div>
+        </div>
+        <div class="row">
+            <div class="person_info">
+                <div class="div_header"><span class="div_header_text">Информация о посетителе</span></div>
+                <div class="lists">
+                    <div class="list1">
+                        <span class="div_text_pi">Фамилия*:  </span>
+                        <span class="div_text_pi">Имя*:  </span>
+                        <span class="div_text_pi">Отчество*:  </span>
+                        <span class="div_text_pi">Телефон:  </span>
+                        <span class="div_text_pi">Email:  </span>
+                    </div>
+                    <div class="inputs1">
+                        <input class="info_list">
+                        <input class="info_list" id="username">
+                        <input class="info_list">
+                        <input class="info_list">
+                        <input class="info_list">
+                    </div>
+                    <div class="list2">
+                        <span class="div_text_pi">Организация:  </span>
+                        <span class="div_text_pi">Примечание:  </span><br>
+                        <span class="div_text_pi">Дата рождения:  </span>
+                        <span class="div_text_pi">Серия:  </span><br>
+                        <span class="div_text_pi">Номер:  </span>
+                    </div>
+                    <div class="inputs1">
+                        <input class="info_list">
+                        <input class="info_list">
+                        <input class="info_list" type="date">
+                        <input class="info_list">
+                        <input class="info_list">
+                    </div>
+                    <div class="uploadingimg">
+                        <center>
+                            <img class="uploadimgpre" src="img/User.jpg"><br>
+                            <label for="file" class="uploadlabel">
+                                <span class="uploadtext">Загрузить фото</span>
+                                <input type="file"  id="file" class="uploadfile" accept=".jpg,.jpeg,.png">
+                            </label>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="documents">
+                <div class="div_header"><span class="div_header_text">Прикрепляемые документы</span></div>
+                <label for="file" class="uploadlabel2">
+                    <span class="uploadtext2">⬆Прикрепить файл</span>
+                    <input type="file" id="file2" class="uploadfile">
+                </label>
+            </div>
+            <div class="buttons">
+                <center>
+                    <button class="clearform" id="clearform">Очистить форму</button>
+                    <button class="submitform" id="submitform"><input type="submit" class="submit" value="Оформить заявку"></button>
+                </center>
+            </div>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
+
+<script src="js/main.js"></script>

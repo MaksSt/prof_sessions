@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\maksi\\Desktop\\wsr_rep\\PassOrderKPro\\PassOrderKPro\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\maksi\\Desktop\\wsr_rep\\PassOrderKPro\\PassOrderKPro\\wwwroot\\img\\User.jpg",
+      "PackagePath": "staticwebassets\\img\\User.jpg"
+    },
+    {
+      "Id": "C:\\Users\\maksi\\Desktop\\wsr_rep\\PassOrderKPro\\PassOrderKPro\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.PassOrderKPro.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.PassOrderKPro.props",
+      "PackagePath": "build\\PassOrderKPro.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.PassOrderKPro.props",
+      "PackagePath": "buildMultiTargeting\\PassOrderKPro.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.PassOrderKPro.props",
+      "PackagePath": "buildTransitive\\PassOrderKPro.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,73 @@
+﻿<Window x:Class="Guard.SecurityPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Guard"
+        mc:Ignorable="d"
+        Title="Стражник - Управление безопасностью" Height="450" Width="800">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="30">
+            <Button Margin="10,0,0,0"  x:Name="VerData"  Click="VerDataBtn" IsEnabled="False">Верификация</Button>
+            <Button Margin="10,0,0,0" x:Name="PermData" Click="PermDataBtn">Мандаты доступа</Button>
+            <Button Margin="200,0,0,0" x:Name="Send" Click="SendBtn">Одобрить</Button>
+            <Label x:Name="UserNameDock" Margin="100,0,0,0"  FontSize="20" Height="35" Width="Auto" HorizontalAlignment="Right"></Label>
+        </StackPanel>
+        <Grid x:Name="UserPart">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            <DataGrid FontSize="18" AutoGenerateColumns="False" x:Name="UserGrid" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ФИО" Binding="{Binding Фио}" Width="290" />
+                    <DataGridTextColumn Header="Должность" Binding="{Binding Должность}" Width="240" />
+                    <DataGridTextColumn Header="Тип пользователя" Binding="{Binding ТипПользователя}" Width="240" />
+                    <DataGridTextColumn Header="Логин" Binding="{Binding Логин}" Width="140" />
+                    <DataGridTextColumn Header="Пароль" Binding="{Binding Пароль}" Width="140" />
+                    <DataGridTextColumn Header="Секретное слово" Binding="{Binding СекретноеСлово}" Width="140" />
+                    <DataGridTextColumn Header="Одобрить" Binding="{Binding Одобрен}" Width="140" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <GridSplitter Grid.Column="1"/>
+            <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+                <Label>Тип пользователя</Label>
+                <ComboBox SelectedItem="{Binding SelectedItem.ТипПользователя, ElementName=UserGrid,Mode=TwoWay}" Height="25" FontSize="14" Width="200" x:Name="ComboBoxTypeUser"/>
+                <Label>Логин</Label>
+                <TextBox Text="{Binding Path=SelectedItem.Логин, ElementName=UserGrid,Mode=TwoWay}" Height="25" FontSize="14" Width="200"/>
+                <Label>Пароль</Label>
+                <TextBox Text="{Binding Path=SelectedItem.Пароль, ElementName=UserGrid,Mode=TwoWay}" Height="25" FontSize="14" Width="200"/>
+                <Label>Секретное слово</Label>
+                <TextBox Text="{Binding Path=SelectedItem.СекретноеСлово, ElementName=UserGrid,Mode=TwoWay}" Height="25" FontSize="14" Width="200"/>
+                <Label>Одобрен</Label>
+                <ComboBox SelectedItem="{Binding SelectedItem.Одобрен, ElementName=UserGrid,Mode=TwoWay}" Height="25" FontSize="14" Width="200" x:Name="ComboBoxAccess"/>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="PermPart" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            <DataGrid FontSize="18" AutoGenerateColumns="False" x:Name="PermGrid" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ФИО" Binding="{Binding Фио}" Width="290" />
+                    <DataGridTextColumn Header="Должность" Binding="{Binding Должность}" Width="240" />
+                    <DataGridTextColumn Header="Добавление Данных" Binding="{Binding ДобавлениеДанных}" Width="240" />
+                    <DataGridTextColumn Header="Просмотр Данных" Binding="{Binding ПросмотрДанных}" Width="140" />
+                    <DataGridTextColumn Header="Формирование Отчётов" Binding="{Binding ФормированиеОтчётов}" Width="140" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <GridSplitter Grid.Column="1"/>
+            <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+                <Label>Добавление Данных</Label>
+                <ComboBox SelectedItem="{Binding SelectedItem.ДобавлениеДанных, ElementName=PermGrid,Mode=TwoWay}" Height="25" FontSize="14" Width="200" x:Name="ComboBoxPermUser1"/>
+                <Label>Просмотр Данных</Label>
+                <ComboBox SelectedItem="{Binding SelectedItem.ПросмотрДанных, ElementName=PermGrid,Mode=TwoWay}" Height="25" FontSize="14" Width="200" x:Name="ComboBoxPermUser2"/>
+                <Label>Формирование Отчётов</Label>
+                <ComboBox SelectedItem="{Binding SelectedItem.ФормированиеОтчётов, ElementName=PermGrid,Mode=TwoWay}" Height="25" FontSize="14" Width="200" x:Name="ComboBoxPermUser3"/>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>

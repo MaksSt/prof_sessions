@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Edit">
+    <ContentPage.Content>
+        <StackLayout Margin="15">
+            <Label Text="Разрешение на территорию"></Label>
+            <Picker x:Name="PickStatus"></Picker>
+            <Label Text="Время убытия"></Label>
+            <TimePicker x:Name="TimePickerBye"></TimePicker>
+            <Label x:Name="User" Text="" Opacity="0"></Label>
+            <Button Text="Сохранить" Clicked="Save_Clicked" VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,52 @@
+﻿@page
+@model PassOrderKPro.Pages.Index
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<meta name="viewport" content="width-device-width, initial-scale=1">
+<html>
+<head>
+    <title>Test</title>
+</head>
+    
+<body>
+<div class="solo">
+    <a href="/form"><button class="solobtn"><img src="img/User.jpg" width="50%"><br>
+        <span>Личное посещение</span></button></a>
+</div>
+<div class="team">
+    <button class="teambtn"><img src="img/User.jpg" width="50%"><br>
+        <span>Групповое посещение</span></button>
+</div>
+</body>
+</html>
+
+<style>
+    .solo{
+        position: absolute;
+        top: 30%;
+        left: 15%;
+        background-color: gray;
+        width: 30%;
+        height: 30%;
+    }
+    .team{
+        position: absolute;
+        top: 30%;
+        right: 15%;
+        background-color: gray;
+        width: 30%;
+        height: 30%;
+    }
+    .solobtn{
+        height: 100%;
+        width: 100%;
+    }
+    .teambtn{
+        height: 100%;
+        width: 100%;
+    }
+</style>

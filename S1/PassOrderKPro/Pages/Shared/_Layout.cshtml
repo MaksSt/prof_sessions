@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+<header>
+    <a href="/"><img src="img/User.jpg" class="luser"></a>
+    <span class="name-company">Название компании</span>
+    <img src="img/User.jpg" class="rbtnuser">
+</header>
+@RenderBody()
+
+</body>
+</html>
+
+<style>
+    .luser{
+        width: 60px;
+        left: 1%;
+    }
+    .rbtnuser{
+        width: 60px;
+        position: absolute;
+        right: 1%;
+    }
+    .name-company{
+        position: absolute;
+        top: 20px;
+        font-weight: bold;
+        font-size: 25px;
+    }
+</style>

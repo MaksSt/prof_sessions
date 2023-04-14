@@ -1,0 +1,33 @@
+﻿<Window x:Class="Employee_Terminal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Employee_Terminal"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" MinHeight="225" MinWidth="500">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <Button Margin="10,0,0,0" Click="SaveChangesBtn">Сохранение изменение</Button>
+        </StackPanel>
+        <Grid ShowGridLines="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            <DataGrid AutoGenerateColumns="True" x:Name="DestGrid" SelectedCellsChanged="DestGrid_SelectedCellsChanged"/>
+            <GridSplitter Grid.Column="1"/>
+            <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+                <Label>Разрешение</Label>
+                <TextBox Text="{Binding Path=SelectedItem.РазрешениеНаТерриторию, ElementName=DestGrid}" IsReadOnly="True" Width="200" FontSize="12" x:Name="PermInfo"/>
+                <Label>Время входа</Label>
+                <TextBox Text="{Binding Path=SelectedItem.ВремяПрибытия, ElementName=DestGrid}" Width="200" FontSize="12" x:Name="DateSelect1"/>
+                <Label>Время выхода</Label>
+                <TextBox Text="{Binding Path=SelectedItem.ВремяУбытия, ElementName=DestGrid}" Width="200" FontSize="12" x:Name="DateSelect2"/>
+                <Label>Черный список</Label>
+                <CheckBox></CheckBox>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>
