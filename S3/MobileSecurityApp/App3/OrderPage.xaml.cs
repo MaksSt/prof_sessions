@@ -44,18 +44,13 @@ namespace App3
         }
         private List<Dest> GetDest()
         {
-            // Создание веб-запроса с указанием адреса
             WebRequest request = WebRequest.Create(Config.ServerAddress + "Order");
-            // Указание метода, время timeout и типа контента
             request.Method = "GET";
             request.Timeout = 1000;
             request.ContentType = "application/json";
-            // Получение результата и ответа
             WebResponse result = request.GetResponse();
             Stream responseStream = result.GetResponseStream();
-            //Создание переменной data 
             List<Dest> data;
-            //Обработчик данных
             using (StreamReader reader = new StreamReader(responseStream))
             {
                 string objectStr = reader.ReadToEnd();
